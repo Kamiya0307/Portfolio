@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+  font-family: "inherit",sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.inner {
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 40px;
+}
+
+/* navbar css */
+
+.navbar {
+  background: transparent;
+  padding: 30px 0;
+  position: fixed;
+  text-shadow: 4px 4px 2px black;
+  top: 0;
+  transition: .3s linear;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar .inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px black;
+}
+
+.toggle-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  position: relative;
+  width: 30px;
+  z-index: 10;
+}
+
+.toggle-menu span {
+  background: white;
+  display: block;
+  height: 3px;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
+}
+
+.navbar-menu a {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: .2s linear;
+}
+
+.navbar-menu a:hover {
+  text-shadow: 0 0 .65px black, 0 0 .65px black;
+}
+
+.sticky {
+  background: white;
+  padding: 18px 0;
+}
+
+.sticky .logo {
+  color: black;
+  text-shadow: 2px 2px 2px grey;
+}
+
+.sticky .navbar-menu a {
+  color: black;
+  text-shadow: 2.5px 2.5px 2px grey;
+}
+
+.sticky .navbar-menu a:hover {
+  text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}
+
+.sticky .toggle-menu span {
+  background: black;
+}
+
+/* home css */
+
+#home {
+  background: url(../img/lightwood.jpg) no-repeat center;
+  background: cover fixed;
+  height: 100vh;
+  min-height: 500px;
+  /* opacity: 0.7; */
+}
+
+#home .inner {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+#home .content {
+  color: white;
+  width: 100%;
+}
+
+#home .content h1 {
+  font-size: 70px;
+  text-shadow: 7px 7px 5px black;
+}
+
+#home .content h1 span {
+  animation: drop 90s 1s ease-in-out forwards;
+  display: inline-block;
+  transform: translateY(-700px);
+}
+
+#home .content h1 span:nth-child(1) {
+  animation: drop 2s 1s ease-in-out forwards;
+}
+
+#home .content h1 span:nth-child(2) {
+  animation: drop 2s 1.2s ease-in-out forwards;
+}
+
+#home .content h1 span:nth-child(3) {
+  animation: drop 2s 1.4s ease-in-out forwards;
+}
+
+#home .content h1 span:nth-child(4) {
+  animation: drop 2s 1.6s ease-in-out forwards;
+}
+
+#home .content h1 span:nth-child(5) {
+  animation: drop 2s 1.8s ease-in-out forwards;
+}
+
+#home .content h1 span:nth-child(6) {
+  animation: drop 2s 2.0s ease-in-out forwards;
+}
+
+#home .content h1 span:nth-child(7) {
+  animation: drop 2s 2.2s ease-in-out forwards;
+}
+
+@keyframes drop {
+  40% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+/* content section css */
+
+section {
+  background: white;
+  padding: 100px 0;
+}
+
+section.grey {
+  background: #f1f1f1;
+}
+
+section.grey .title::after {
+  border: 4px solid #f1f1f1;
+}
+
+/* sns css */
+
+.social-media-link {
+  height: 50px;
+  margin: 20px 0 10px 20px;
+}
+
+.social-media-link a {
+  color: white;
+  font-size: 35px;
+  margin: 0 10px;
+  text-shadow: 3px 3px 3px black;
+  transition: .2s linear;
+}
+
+#twitter:hover {
+  color: #00acee;
+  text-shadow: none;
+}
+
+#instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+#youtube:hover {
+  background: radial-gradient(at center, white 40%, transparent 40%);
+  color: red;
+  text-shadow: none;
+}
+
+/* content title css */
+
+.title {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 80px;
+  padding-bottom: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.title::before {
+  background: url(../img/lightwood.jpg);
+  bottom: 0;
+  content: "";
+  height: 7px;
+  left: calc(50% - 50px);
+  position: absolute;
+  width: 100px;
+}
+
+.title::after {
+  background: url(../img/darkwood.jpg);
+  border: 4px solid white;
+  border-radius: 50%;
+  bottom: -7px;
+  content: "";
+  height: 14px;
+  left: calc(50% - 12px);
+  position: absolute;
+  width: 18px;
+}
+
+/* footer css */
+
+footer {
+  background: url(../img/lightwood.jpg) no-repeat center;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 20px;
+}
+
+/* go to top css */
+
+.TOP {
+  background: url(../img/darkwood.jpg) no-repeat;
+  border: none;
+  border-radius: 7px;
+  bottom: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+  height: 60px;
+  outline: none;
+  position: fixed;
+  right: 30px;
+  width: 60px;
+  z-index: 10;
+}
+
+.TOP:active {
+  box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+  transform: translate3d(0,4px,0);
+}
+
+
+@media screen and (max-width: 980px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  .navbar-menu {
+    background: url(../img/wood.jpg);
+    height: 100vh;
+    max-width: 400px;
+    padding: 80px 50px;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: .3s linear;
+    width: 100%;
+  }
+
+  .navbar-menu a {
+    display: block;
+    font-size: 30px;
+    margin: 30px 0;
+    text-shadow: none;
+  }
+
+  .sticky .navbar-menu a {
+    color: white;
+    text-shadow: none;
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .toggle-menu.active span:nth-child(1) {
+    background: white;
+    top: 4px;
+    transform: rotate(-45deg);
+  }
+
+  .toggle-menu.active span:nth-child(2) {
+    background: white;
+    opacity: 0;
+  }
+
+  .toggle-menu.active span:nth-child(3) {
+    background: white;
+    bottom: 14px;
+    transform: rotate(45deg);
+  }
+
+  .inner {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inner {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,226 @@
+/* about css */
+.about-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-picture {
+  border-radius: 50%;
+  box-shadow: 0 0 3px 5px #ccc;
+  height: 250px;
+  margin: 0 70px auto 0;
+  width: 250px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 30px;
+}
+
+.about-content h3 {
+  color: #444;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.about-content ul {
+  font-size: 17px;
+  list-style: none;
+  margin: 20px 0 0;
+  text-align: left;
+  width: 50%;
+}
+
+.social-media-link {
+  margin: 20px 0 20px 20px;
+}
+
+.about-content .social-media-link a {
+  font-size: 40px;
+  text-shadow: none;
+}
+
+/* content css */
+
+.profile,
+.skill,
+.history,
+.links {
+  color: black;
+  font-size: 20px;
+  margin: 40px 0 0;
+  padding-bottom: 5px;
+  position: relative;
+  z-index: 9;
+}
+
+.profile::before,
+.skill::before,
+.history::before,
+.links::before {
+  background: url(../img/lightwood.jpg);
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.profile::before {
+  bottom: 7px;
+  height: 10px;
+  left: -7px;
+  width: 80px;
+}
+
+.skill::before {
+  bottom: 7px;
+  height: 10px;
+  left: -7px;
+  width: 70px;
+}
+
+.history::before {
+  bottom: 7px;
+  height: 10px;
+  left: -7px;
+  width: 88px;
+}
+
+.links::before {
+  bottom: 7px;
+  height: 10px;
+  left: -7px;
+  width: 124px;
+}
+
+.about-content h3 span:nth-child(1):after {
+  content: "/";
+  display: inline-block;
+  height: 6px;
+  margin: 0 14px;
+  width: 6px;
+}
+
+.about-content p {
+  font-size: 17px;
+  line-height: 26px;
+  margin: 20px 0 0 20px;
+  text-align: justify;
+}
+
+/* sns css */
+
+.social-media-link a {
+  color: black;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+/* skill content css */
+
+#skill-content {
+  display: flex;
+  justify-content: left;
+  margin: 20px 0 0 20px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.skill-icon {
+  background: white;
+  padding: 10px;
+  width: 200px;
+}
+
+.skill-icon p {
+  font-size: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+.skill-icon h5 {
+  font-size: 15px;
+}
+
+.skill-star {
+  display: flex;
+  justify-content: center;
+}
+
+#star {
+  font-size: 20px;
+  margin: 5px 2px;
+}
+
+.grey {
+  color: rgba(128, 128, 128, .39);
+}
+
+#html {
+  color: #e34f26;
+}
+
+#css {
+  color: #1680c0;
+}
+
+#javascript {
+  color: #f7df1e;
+}
+
+/* footer css */
+
+footer .social-media-link a {
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+@media screen and (max-width: 980px) {
+  .about-picture {
+    margin: 0 auto 60px;
+  }
+
+  .about-content {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .about-content p {
+    margin: 20px auto 0;
+    width: 80%;
+  }
+
+  .about-content .profile::before {
+    left: calc(50% - 40px);
+  }
+
+  .about-content .skill::before {
+    left: calc(50% - 35px);
+  }
+
+  .about-content .history::before {
+    left: calc(50% - 45px);
+  }
+
+  .about-content .links::before {
+    left: calc(50% - 62px);
+  }
+
+  .about-content #skill-content {
+    display: inline-block;
+    padding: 0;
+  }
+
+  #skill-content .skill-icon {
+    margin: 10px 0;
+  }
+
+  .about-content ul {
+    margin: 20px auto 0;
+  }
+}
+

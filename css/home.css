@@ -1,0 +1,171 @@
+/* home css */
+#home .button {
+  margin-top: 60px;
+}
+
+#home .button a {
+  border: 1px solid white;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .507);
+  color: white;
+  display: inline-block;
+  font-size: 19px;
+  margin: 15px 30px;
+  padding: 14px 0;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, .356);
+  transition: .2s linear;
+  width: 180px;
+}
+
+#home .button a:hover {
+  box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+  text-shadow: 0 0 .65px black, 0 0 .65px black;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+/* about css */
+
+.about-content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.about-picture {
+  border-radius: 50%;
+  box-shadow: 0 0 3px 5px #ccc;
+  height: 300px;
+  margin: 0 100px;
+  width: 300px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  color: #444;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.about-text h3 span:nth-child(1):after {
+  content: "/";
+  display: inline-block;
+  height: 6px;
+  margin: 0 14px;
+  width: 6px;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 26px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.about-text h4 {
+  float: right;
+  font-size: 17px;
+  margin: 0 50px 20px 0;
+}
+
+.about-text h4 a {
+  color: grey;
+}
+
+.about-text .social-media-link a {
+  color: black;
+  font-size: 40px;
+  margin: 20px 10px;
+  text-shadow: none;
+}
+
+/* works css */
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work {
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  width: calc(33% - 10px);
+}
+
+.work img {
+  height: 100%;
+  transition: .4s linear;
+  width: 100%;
+}
+
+.work::before {
+  background: white;
+  content: "";
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transform: scale(0);
+  transition: .2s linear;
+  width: 100%;
+  z-index: 1;
+}
+
+.work .info {
+  bottom: 40px;
+  color: black;
+  left: 40px;
+  opacity: 0;
+  position: absolute;
+  transition: .4s linear;
+  z-index: 2;
+}
+
+.work:hover img {
+  transform: scale(1.4);
+}
+
+.work:hover::before,
+.work:hover .info {
+  opacity: .5;
+  transform: scale(1);
+}
+
+#works h4 {
+  font-size: 17px;
+  margin: 40px 50px 0 0;
+  text-align: right;
+}
+
+#works h4 a {
+  color: grey;
+}
+
+@media screen and (max-width: 980px) {
+  .about-picture {
+    margin: 0 auto 60px;
+  }
+
+  .about-text {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .about-text h4,
+  .works h4 {
+    margin: 40px 0 0;
+    text-align: right;
+    width: 100%;
+  }
+
+  .work {
+    width: calc(50% - 10px);
+  }
+}
